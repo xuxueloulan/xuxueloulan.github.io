@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>贺莉，我爱你</title>
+    <meta name="language" content="zh-CN">
+    <meta name="title" content="贺莉，我爱你">
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .city {
+            width: 100%;
+            position: fixed;
+            bottom:
+                0px;
+            z-index: 100;
+        }
+
+        .city img {
+            width: 100%;
+        }
+
+        audio {
+            opacity: 0;
+        }
+    </style>
+    <link href="modal.css" rel="stylesheet" />
+</head>
+
+<body onselectstart="return false">
+    <!--烟花部分-->
+    <canvas id='cas' style="background-color:rgba(0,5,24,1); cursor: pointer;">
+        浏览器不支持canvas
+    </canvas>
+    <div class="city">
+        <img src="assets/city.png" alt="" />
+    </div>
+    <img src="assets/moon.png" alt="" id="moon" style="visibility: hidden;" />
+    <div style="display:none">
+        <div class="shape">
+            贺莉
+        </div>
+        <div class="shape">
+            我爱你
+        </div>
+    </div>
+    <!--音乐部分-->
+    <audio autoplay loop id="music">
+        <source src="assets/music.mp3" />
+    </audio>
+    <script src="fire.js"></script>
+</body>
+
+</html>
